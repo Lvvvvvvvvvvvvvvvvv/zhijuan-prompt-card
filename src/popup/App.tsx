@@ -10,7 +10,7 @@ type UiLanguage = 'zh' | 'en';
 
 const popupCopy = {
   en: {
-    title: 'Zhijuan Prompt',
+    title: 'PromptLens',
     subtitle: 'Image source',
     ready: 'Ready',
     saved: 'Saved',
@@ -42,7 +42,7 @@ const popupCopy = {
     dockLabel: 'Local workflow'
   },
   zh: {
-    title: 'Zhijuan Prompt',
+    title: 'PromptLens',
     subtitle: '图片源',
     ready: '准备就绪',
     saved: '已保存',

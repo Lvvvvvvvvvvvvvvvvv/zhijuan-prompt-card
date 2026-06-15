@@ -1,16 +1,16 @@
 :root {
   color-scheme: dark;
-  --bg: #080a0d;
-  --glass: rgba(18, 21, 24, 0.68);
-  --glass-strong: rgba(22, 26, 30, 0.86);
-  --line: rgba(255, 255, 255, 0.14);
-  --line-hot: rgba(130, 184, 155, 0.46);
-  --text: #f2f5f1;
-  --muted: #9ea8a2;
-  --soft: #d2ded5;
-  --lake: #82b89b;
-  --amber: #b79a70;
-  --danger: #d98585;
+  --bg: #06080f;
+  --glass: rgba(10, 12, 28, 0.72);
+  --glass-strong: rgba(14, 16, 36, 0.88);
+  --line: rgba(255, 255, 255, 0.12);
+  --line-hot: rgba(129, 140, 248, 0.48);
+  --text: #f0f2ff;
+  --muted: #8892b0;
+  --soft: #c5c9f5;
+  --arc: #818cf8;
+  --amber: #c4a76e;
+  --danger: #e07878;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   font-family: "Geist", "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -24,8 +24,9 @@ body {
   min-height: 390px;
   margin: 0;
   background:
-    radial-gradient(circle at 18% 8%, rgba(130, 184, 155, 0.15), transparent 28%),
-    linear-gradient(145deg, #0d1112 0%, #060709 64%, #0b0d0f 100%);
+    radial-gradient(ellipse at 20% 0%, rgba(99, 102, 241, 0.18), transparent 38%),
+    radial-gradient(ellipse at 82% 90%, rgba(129, 140, 248, 0.08), transparent 30%),
+    linear-gradient(160deg, #0a0c1e 0%, #060810 55%, #08090f 100%);
   color: var(--text);
 }
 
@@ -34,10 +35,10 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.024) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    linear-gradient(rgba(129, 140, 248, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(129, 140, 248, 0.02) 1px, transparent 1px);
   background-size: 28px 28px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.64), transparent 84%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 80%);
   content: "";
 }
 
@@ -110,7 +111,7 @@ label svg {
 }
 
 .brand p {
-  color: var(--lake);
+  color: var(--arc);
   font-size: 10px;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -131,8 +132,8 @@ label svg {
   padding: 4px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.055);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .language-pills button {
@@ -147,8 +148,8 @@ label svg {
 }
 
 .language-pills button.is-active {
-  background: var(--lake);
-  color: #07100c;
+  background: var(--arc);
+  color: #0d0e1f;
 }
 
 .command-puck {
@@ -158,37 +159,38 @@ label svg {
   width: 238px;
   height: 238px;
   margin: 4px auto 13px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 50%;
   background:
-    repeating-radial-gradient(circle, transparent 0 31px, rgba(130, 184, 155, 0.11) 32px 33px),
-    radial-gradient(circle at 50% 50%, rgba(130, 184, 155, 0.22), transparent 42%),
-    rgba(255, 255, 255, 0.043);
+    repeating-radial-gradient(circle, transparent 0 31px, rgba(99, 102, 241, 0.09) 32px 33px),
+    radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.2), transparent 44%),
+    rgba(255, 255, 255, 0.038);
   box-shadow:
-    0 24px 76px rgba(0, 0, 0, 0.42),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18),
-    inset 0 -22px 52px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(22px) saturate(145%);
-  -webkit-backdrop-filter: blur(22px) saturate(145%);
+    0 24px 80px rgba(0, 0, 0, 0.48),
+    0 0 0 1px rgba(99, 102, 241, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -22px 52px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
   animation: puck-rise 460ms var(--ease) both;
 }
 
 .command-puck.is-drop-active {
-  border-color: rgba(130, 184, 155, 0.68);
+  border-color: rgba(99, 102, 241, 0.62);
   background:
-    repeating-radial-gradient(circle, transparent 0 31px, rgba(130, 184, 155, 0.18) 32px 33px),
-    radial-gradient(circle at 50% 50%, rgba(130, 184, 155, 0.34), transparent 45%),
-    rgba(130, 184, 155, 0.1);
+    repeating-radial-gradient(circle, transparent 0 31px, rgba(99, 102, 241, 0.16) 32px 33px),
+    radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.32), transparent 46%),
+    rgba(99, 102, 241, 0.09);
   box-shadow:
-    0 24px 86px rgba(130, 184, 155, 0.16),
-    inset 0 0 0 1px rgba(130, 184, 155, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    0 24px 90px rgba(99, 102, 241, 0.18),
+    inset 0 0 0 1px rgba(99, 102, 241, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
 .command-puck::before,
 .command-puck::after {
   position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   content: "";
 }
@@ -199,7 +201,7 @@ label svg {
 
 .command-puck::after {
   inset: 48px;
-  border-color: rgba(130, 184, 155, 0.22);
+  border-color: rgba(99, 102, 241, 0.2);
 }
 
 .puck-core {
@@ -247,13 +249,13 @@ label svg {
   padding: 0 13px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(8, 10, 13, 0.74);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  background: rgba(6, 8, 15, 0.78);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   color: var(--text);
   font-size: 12px;
   font-weight: 900;
-  backdrop-filter: blur(18px) saturate(145%);
-  -webkit-backdrop-filter: blur(18px) saturate(145%);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
   user-select: none;
 }
 
@@ -265,9 +267,9 @@ label svg {
 .orbit-action--primary {
   right: -22px;
   bottom: 52px;
-  border-color: var(--line-hot);
-  background: linear-gradient(145deg, rgba(130, 184, 155, 0.94), rgba(98, 126, 108, 0.9));
-  color: #07100c;
+  border-color: rgba(129, 140, 248, 0.6);
+  background: linear-gradient(145deg, rgba(129, 140, 248, 0.92), rgba(99, 102, 241, 0.88));
+  color: #0d0e1f;
 }
 
 .orbit-action--secondary {
@@ -290,13 +292,13 @@ label svg {
   border: 1px solid var(--line);
   border-radius: 18px;
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.082), rgba(255, 255, 255, 0.032) 42%, rgba(130, 184, 155, 0.034)),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025) 42%, rgba(99, 102, 241, 0.03)),
     var(--glass);
   box-shadow:
-    0 16px 48px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px) saturate(145%);
-  -webkit-backdrop-filter: blur(20px) saturate(145%);
+    0 16px 50px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
 }
 
 .signal-card {
@@ -334,7 +336,7 @@ button.signal-card {
 
 .signal-card em {
   overflow: hidden;
-  color: #c8d8cc;
+  color: #b8bcf0;
   font-size: 11px;
   font-style: normal;
   text-overflow: ellipsis;
@@ -358,7 +360,7 @@ button.signal-card {
   min-height: 38px;
   border: 0;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.055);
+  background: rgba(255, 255, 255, 0.048);
   color: var(--soft);
   font-size: 11px;
   font-weight: 900;
@@ -367,7 +369,7 @@ button.signal-card {
 
 .utility-dock button:hover,
 .utility-dock .file-trigger:hover {
-  background: rgba(130, 184, 155, 0.13);
+  background: rgba(99, 102, 241, 0.14);
   color: var(--text);
   transform: translateY(-1px);
 }
@@ -384,7 +386,7 @@ button.signal-card {
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 0 12px;
-  background: rgba(255, 255, 255, 0.055);
+  background: rgba(255, 255, 255, 0.048);
   color: var(--text);
   font-size: 12px;
   font-weight: 900;
@@ -396,7 +398,7 @@ button.signal-card {
 }
 
 .app-header p {
-  color: var(--lake);
+  color: var(--arc);
   font-size: 10px;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -431,10 +433,10 @@ button.signal-card {
   min-height: 72px;
   max-height: 190px;
   aspect-ratio: var(--zpc-history-image-ratio, 1 / 1);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.045);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.11);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   outline: none;
 }
 
@@ -445,8 +447,8 @@ button.signal-card {
 
 .history-visual-card:focus {
   box-shadow:
-    0 0 0 3px rgba(130, 184, 155, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    0 0 0 3px rgba(99, 102, 241, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .history-visual-card__media,
@@ -460,8 +462,8 @@ button.signal-card {
   display: grid;
   place-items: center;
   background:
-    linear-gradient(135deg, rgba(130, 184, 155, 0.12), rgba(255, 255, 255, 0.035)),
-    rgba(130, 184, 155, 0.055);
+    linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(255, 255, 255, 0.03)),
+    rgba(99, 102, 241, 0.05);
 }
 
 .history-visual-card__media img {
@@ -473,9 +475,9 @@ button.signal-card {
   display: grid;
   place-items: center;
   background:
-    linear-gradient(135deg, rgba(130, 184, 155, 0.13), rgba(255, 255, 255, 0.035)),
-    rgba(130, 184, 155, 0.06);
-  color: rgba(210, 222, 213, 0.72);
+    linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(255, 255, 255, 0.03)),
+    rgba(99, 102, 241, 0.055);
+  color: rgba(197, 201, 245, 0.7);
 }
 
 .history-visual-card__placeholder span {
@@ -493,7 +495,7 @@ button.signal-card {
   gap: 3px;
   padding: 7px;
   background:
-    linear-gradient(180deg, rgba(6, 7, 9, 0.12), rgba(6, 7, 9, 0.78) 42%, rgba(6, 7, 9, 0.94));
+    linear-gradient(180deg, rgba(4, 5, 14, 0.1), rgba(4, 5, 14, 0.8) 42%, rgba(4, 5, 14, 0.95));
   opacity: 0;
   transform: translateY(5px);
   transition:
@@ -528,7 +530,7 @@ button.signal-card {
 
 .history-visual-card__overlay p {
   display: -webkit-box;
-  color: rgba(210, 222, 213, 0.86);
+  color: rgba(197, 201, 245, 0.86);
   font-size: 9.5px;
   line-height: 1.22;
   -webkit-box-orient: vertical;
@@ -542,7 +544,7 @@ button.signal-card {
   min-height: 35px;
   border: 1px solid var(--line);
   border-radius: 13px;
-  background: rgba(255, 255, 255, 0.055);
+  background: rgba(255, 255, 255, 0.048);
   color: var(--text);
   font-size: 11px;
   font-weight: 850;
@@ -553,7 +555,7 @@ button.signal-card {
 .history-preview-head button:hover,
 .history-actions button:hover {
   border-color: var(--line-hot);
-  background: rgba(130, 184, 155, 0.12);
+  background: rgba(99, 102, 241, 0.12);
 }
 
 .history-list {
@@ -603,11 +605,11 @@ button.signal-card {
   max-height: 210px;
   aspect-ratio: var(--zpc-history-image-ratio, 1 / 1);
   overflow: hidden;
-  border: 1px solid rgba(130, 184, 155, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.22);
   border-radius: 12px;
   background:
-    linear-gradient(135deg, rgba(130, 184, 155, 0.12), rgba(255, 255, 255, 0.035)),
-    rgba(130, 184, 155, 0.055);
+    linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(255, 255, 255, 0.03)),
+    rgba(99, 102, 241, 0.055);
 }
 
 .history-item__media img {
@@ -622,7 +624,7 @@ button.signal-card {
   place-items: center;
   width: 100%;
   height: 100%;
-  color: rgba(210, 222, 213, 0.74);
+  color: rgba(197, 201, 245, 0.72);
   font-size: 9px;
   font-weight: 900;
 }
@@ -654,8 +656,8 @@ button.signal-card {
   overflow: hidden;
   padding: 4px 8px;
   border-radius: 999px;
-  background: rgba(130, 184, 155, 0.13);
-  color: #cfe4d4;
+  background: rgba(99, 102, 241, 0.14);
+  color: #c5c9f5;
   font-size: 10px;
   font-weight: 900;
   line-height: 1;
@@ -665,12 +667,12 @@ button.signal-card {
 
 .history-item__top span.failed,
 .history-item__top span.error {
-  background: rgba(217, 133, 133, 0.13);
+  background: rgba(224, 120, 120, 0.13);
   color: #ffd0d0;
 }
 
 .history-item__top span.canceled {
-  background: rgba(183, 154, 112, 0.15);
+  background: rgba(196, 167, 110, 0.14);
   color: #f1d7ad;
 }
 
@@ -687,9 +689,9 @@ button.signal-card {
   min-width: 0;
   overflow: hidden;
   padding: 9px;
-  border: 1px solid rgba(130, 184, 155, 0.18);
+  border: 1px solid rgba(99, 102, 241, 0.2);
   border-radius: 13px;
-  background: rgba(130, 184, 155, 0.065);
+  background: rgba(99, 102, 241, 0.065);
 }
 
 .history-preview-head {
@@ -701,7 +703,7 @@ button.signal-card {
 
 .history-prompt-preview span,
 .history-source span {
-  color: var(--lake);
+  color: var(--arc);
   font-size: 10px;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -784,7 +786,7 @@ select {
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 0 10px;
-  background: rgba(5, 7, 12, 0.74);
+  background: rgba(4, 5, 14, 0.76);
   color: var(--text);
   outline: none;
 }
@@ -792,7 +794,7 @@ select {
 input:focus,
 select:focus {
   border-color: var(--line-hot);
-  box-shadow: 0 0 0 3px rgba(130, 184, 155, 0.09);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
 @keyframes puck-rise {

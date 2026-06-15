@@ -439,7 +439,7 @@ async function saveFloatingButtonPreference(persistentFloatingButton: boolean): 
 
 function runBackgroundTask(task: () => Promise<unknown>): void {
   void task().catch((error) => {
-    console.warn('[Zhijuan Prompt Card]', errorToMessage(error));
+    console.warn('[PromptLens]', errorToMessage(error));
   });
 }
 

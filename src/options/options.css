@@ -1,14 +1,14 @@
 :root {
   color-scheme: dark;
-  --bg: #080a0d;
-  --glass: rgba(18, 21, 24, 0.68);
-  --glass-strong: rgba(22, 26, 30, 0.86);
+  --bg: #06080f;
+  --glass: rgba(10, 12, 28, 0.72);
+  --glass-strong: rgba(14, 16, 38, 0.9);
   --line: rgba(255, 255, 255, 0.14);
-  --line-hot: rgba(130, 184, 155, 0.46);
-  --text: #f2f5f1;
-  --muted: #9ea8a2;
-  --soft: #d2ded5;
-  --lake: #82b89b;
+  --line-hot: rgba(99, 102, 241, 0.46);
+  --text: #f0f2ff;
+  --muted: #8892b0;
+  --soft: #c5c9f5;
+  --arc: #818cf8;
   --amber: #b79a70;
   --danger: #d98585;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -23,9 +23,9 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 15% 8%, rgba(130, 184, 155, 0.15), transparent 26%),
+    radial-gradient(circle at 15% 8%, rgba(99, 102, 241, 0.15), transparent 26%),
     radial-gradient(circle at 92% 12%, rgba(183, 154, 112, 0.08), transparent 28%),
-    linear-gradient(145deg, #0d1112 0%, #060709 62%, #0b0d0f 100%);
+    linear-gradient(145deg, #0a0c1e 0%, #060810 58%, #08090f 100%);
   color: var(--text);
 }
 
@@ -58,7 +58,7 @@ body::before {
   border: 1px solid var(--line);
   border-radius: 28px;
   background:
-    linear-gradient(155deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03) 38%, rgba(130, 184, 155, 0.04)),
+    linear-gradient(155deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03) 38%, rgba(99, 102, 241, 0.04)),
     var(--glass);
   box-shadow:
     0 26px 90px rgba(0, 0, 0, 0.38),
@@ -75,7 +75,7 @@ body::before {
   pointer-events: none;
   background:
     linear-gradient(120deg, rgba(255, 255, 255, 0.14), transparent 22%),
-    radial-gradient(circle at 88% 0%, rgba(130, 184, 155, 0.12), transparent 32%);
+    radial-gradient(circle at 88% 0%, rgba(99, 102, 241, 0.12), transparent 32%);
   content: "";
 }
 
@@ -103,7 +103,7 @@ body::before {
 
 .rail-brand p,
 .workbench-head p {
-  color: var(--lake);
+  color: var(--arc);
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -137,14 +137,14 @@ body::before {
 
 .rail-nav-item.is-active {
   border-color: var(--line-hot);
-  background: rgba(130, 184, 155, 0.14);
+  background: rgba(99, 102, 241, 0.14);
   color: var(--text);
 }
 
 .rail-nav-item:hover {
   transform: translateY(-1px);
   border-color: var(--line-hot);
-  background: rgba(130, 184, 155, 0.11);
+  background: rgba(99, 102, 241, 0.11);
   color: var(--text);
 }
 
@@ -204,8 +204,8 @@ body::before {
   padding: 7px 10px;
   border: 1px solid var(--line-hot);
   border-radius: 999px;
-  background: rgba(130, 184, 155, 0.13);
-  color: #d9eadc;
+  background: rgba(99, 102, 241, 0.13);
+  color: #d8dcff;
   font-size: 12px;
   font-weight: 900;
 }
@@ -223,7 +223,7 @@ body::before {
 }
 
 .settings-section--endpoint {
-  border-color: rgba(130, 184, 155, 0.32);
+  border-color: rgba(99, 102, 241, 0.32);
 }
 
 .settings-section--compact {
@@ -237,7 +237,7 @@ body::before {
 
 .section-copy span,
 .trust-panel span {
-  color: var(--lake);
+  color: var(--arc);
   font-size: 11px;
   font-weight: 920;
   letter-spacing: 0.12em;
@@ -286,7 +286,7 @@ select {
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 0 12px;
-  background: rgba(5, 7, 8, 0.68);
+  background: rgba(4, 5, 14, 0.74);
   color: var(--text);
   outline: none;
 }
@@ -294,7 +294,7 @@ select {
 input[type="checkbox"] {
   width: 24px;
   height: 24px;
-  accent-color: var(--lake);
+  accent-color: var(--arc);
 }
 
 .toggle-row {
@@ -306,13 +306,13 @@ input[type="checkbox"] {
   padding: 0 12px;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: rgba(5, 7, 8, 0.68);
+  background: rgba(4, 5, 14, 0.74);
 }
 
 input:focus,
 select:focus {
   border-color: var(--line-hot);
-  box-shadow: 0 0 0 3px rgba(130, 184, 155, 0.09);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.09);
 }
 
 .button-row {
@@ -335,7 +335,7 @@ button {
 button:hover {
   transform: translateY(-1px);
   border-color: var(--line-hot);
-  background: rgba(130, 184, 155, 0.13);
+  background: rgba(99, 102, 241, 0.13);
 }
 
 button:active {
@@ -344,8 +344,8 @@ button:active {
 
 .primary {
   border-color: var(--line-hot);
-  background: rgba(130, 184, 155, 0.88);
-  color: #07100c;
+  background: rgba(99, 102, 241, 0.88);
+  color: #0d0e1f;
 }
 
 footer {

@@ -1,6 +1,6 @@
 const manifest = {
   manifest_version: 3,
-  name: 'Zhijuan Prompt Card',
+  name: 'PromptLens',
   description: 'Turn images, page regions, and local files into structured prompts using your own vision API.',
   version: '0.2.0',
   version_name: '0.2.0 Visual History MVP',
@@ -8,7 +8,7 @@ const manifest = {
   host_permissions: ['<all_urls>', 'file:///*'],
   background: { service_worker: 'background.js', type: 'module' },
   action: {
-    default_title: 'Zhijuan Prompt Card',
+    default_title: 'PromptLens',
     default_popup: 'popup.html',
     default_icon: {
       '16': 'icons/icon-16.png',
