@@ -6,7 +6,7 @@ import type { AppSettings, InterfaceLanguage, RuntimeResponse } from '../shared/
 
 const optionsCopy = {
   en: {
-    title: 'PromptLens',
+    title: 'Image Prompt King',
     settings: 'API Settings',
     subtitle: 'Connection and generator defaults live here, away from the daily popup.',
     ready: 'Ready',
@@ -35,7 +35,7 @@ const optionsCopy = {
       'Content script and scripting power the picker and floating panel. <all_urls> supports user-triggered image picking on HTTP/HTTPS pages; file:///* supports local-file workflows when enabled by the browser user. storage keeps local settings/history, clipboardWrite copies prompts.'
   },
   zh: {
-    title: 'PromptLens',
+    title: 'Image Prompt King',
     settings: 'API 设置',
     subtitle: '连接、模型、默认生成器放在这里，日常弹窗只保留操作入口。',
     ready: '准备就绪',

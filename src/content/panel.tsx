@@ -399,7 +399,7 @@ export function Panel(props: PanelProps) {
           <>
             <div className="zpc-drag-orb" aria-hidden="true" />
           <div className="zpc-title-stack">
-              <div className="zpc-kicker">Zhijuan Prompt</div>
+              <div className="zpc-kicker">Image Prompt King</div>
               <h2>{state.view === 'history' ? labels.promptHistory : state.loading ? labels.analyzing : analysis ? labels.output : state.picking === 'image' ? labels.pickingImage : state.picking === 'selection' ? labels.pickingSelection : labels.ready}</h2>
             </div>
             <div className="zpc-header-controls">
@@ -1399,7 +1399,7 @@ interface PanelChromeState {
   collapsed: boolean;
 }
 
-const PANEL_UI_STORAGE_KEY = 'zhijuan_prompt_panel_ui_v2';
+const PANEL_UI_STORAGE_KEY = 'ipk_panel_ui_v2';
 const PANEL_EXPANDED_WIDTH = 376;
 const PANEL_COLLAPSED_WIDTH = 46;
 const PANEL_COLLAPSED_HEIGHT = 46;
@@ -1525,7 +1525,7 @@ function defaultPanelUi(): PanelChromeState {
 }
 
 function syncPanelHostBounds(open: boolean, position: { x: number; y: number }, collapsed: boolean): void {
-  const host = document.getElementById('zhijuan-prompt-root');
+  const host = document.getElementById('ipk-root');
   if (!host) return;
 
   const bounds = open ? getPanelHostBounds(position, collapsed) : { left: 0, top: 0, width: 0, height: 0 };

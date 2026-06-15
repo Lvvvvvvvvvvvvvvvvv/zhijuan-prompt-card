@@ -16,8 +16,8 @@ export const DEFAULT_SETTINGS: AppSettings = {
 };
 
 export const STORAGE_KEYS = {
-  settings: 'zhijuan.settings',
-  history: 'zhijuan.history'
+  settings: 'ipk.settings',
+  history: 'ipk.history'
 } as const;
 
 export const GENERATOR_SITE_IDS: GeneratorSite[] = ['chatgpt', 'codex', 'jimeng', 'gemini', 'midjourney', 'lovart'];

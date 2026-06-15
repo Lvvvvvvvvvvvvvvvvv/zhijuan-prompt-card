@@ -8,7 +8,7 @@ import { fileToDataUrl, isImageFile } from '../shared/imageData';
 import { clearHistory, deleteHistoryEntry, getHistory, getSettings, saveSettings } from '../shared/storage';
 import type { AnalysisPhase, GeneratorSite, HistoryEntry, ImageTarget, InterfaceLanguage, RuntimeResponse } from '../shared/types';
 
-const INSTANCE_KEY = '__zhijuanPromptCardInstanceId__';
+const INSTANCE_KEY = '__ipkInstanceId__';
 const instanceId = `${Date.now()}-${Math.random()}`;
 
 let root: ReturnType<typeof createRoot> | undefined;
@@ -44,9 +44,9 @@ function isActiveInstance(): boolean {
 
 function ensurePanelRoot(): void {
   if (root) return;
-  document.getElementById('zhijuan-prompt-root')?.remove();
+  document.getElementById('ipk-root')?.remove();
   const host = document.createElement('div');
-  host.id = 'zhijuan-prompt-root';
+  host.id = 'ipk-root';
   const shadow = host.attachShadow({ mode: 'open' });
   const style = document.createElement('style');
   style.textContent = panelCss;

@@ -25,9 +25,9 @@ type RuntimeMessage =
   | { type: 'TEST_CONNECTION'; payload: AppSettings }
   | { type: 'TOGGLE_FAVORITE'; payload: { id: string; favorite: boolean } };
 
-const MENU_ANALYZE_IMAGE = 'zhijuan-analyze-image';
-const MENU_PICK_IMAGE = 'zhijuan-pick-image';
-const MENU_CAPTURE_AREA = 'zhijuan-capture-area';
+const MENU_ANALYZE_IMAGE = 'ipk-analyze-image';
+const MENU_PICK_IMAGE = 'ipk-pick-image';
+const MENU_CAPTURE_AREA = 'ipk-capture-area';
 const ANALYSIS_CANCELED_MESSAGE = '已取消识别。';
 const RED_TEST_IMAGE =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVR4nGP4z8DwHxkzkC4AADxAH+HggXe0AAAAAElFTkSuQmCC';
@@ -439,7 +439,7 @@ async function saveFloatingButtonPreference(persistentFloatingButton: boolean): 
 
 function runBackgroundTask(task: () => Promise<unknown>): void {
   void task().catch((error) => {
-    console.warn('[PromptLens]', errorToMessage(error));
+    console.warn('[Image Prompt King]', errorToMessage(error));
   });
 }
 
